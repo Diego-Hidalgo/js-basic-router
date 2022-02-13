@@ -33,3 +33,9 @@ let resolveRoute = (route)=> {
         throw new Error(`Route ${route} not found`);
     };
 };
+
+let router = ()=> {
+    let url = window.location.hash.slice(1) || '/';
+    let route = resolveRoute(url);
+    route();
+};
