@@ -25,3 +25,11 @@ let route = (path, template) => {
 let template = (name, templateFunction) => {
     return templates[name] = templateFunction;
 };
+
+let resolveRoute = (route)=> {
+    try{
+        return routes[route];
+    } catch (e) {
+        throw new Error(`Route ${route} not found`);
+    };
+};
