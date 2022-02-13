@@ -26,6 +26,17 @@ let template = (name, templateFunction) => {
     return templates[name] = templateFunction;
 };
 
+template('home', function(){
+    home();
+});
+
+template('about', function(){
+    about();
+});
+
+route('/', 'home');
+route('/about', 'about');
+
 let resolveRoute = (route)=> {
     try{
         return routes[route];
