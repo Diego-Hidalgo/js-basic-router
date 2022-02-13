@@ -4,23 +4,11 @@ let templates = {};
 let app_div = document.getElementById('app');
 
 let home = () => {
-    let div = document.createElement('div');
-    let link = document.createElement('a');
-    link.href = '#/about';
-    link.innerText = 'About';
-    div.innerHTML = '<h1>Home</h1>';
-    div.appendChild(link);
-    app_div.appendChild(div);
+    app_div.innerHTML = '<div><h1>Home</h1><a href=#/about>About</a></div>';
 };
 
 let about = () => {
-    let div = document.createElement('div');
-    let link = document.createElement('a');
-    link.href = '#/';
-    link.innerText = 'Home';
-    div.innerHTML = '<h1>About</h1>';
-    div.appendChild(link);
-    app_div.appendChild(div);
+    app_div.innerHTML = '<div><h1>About</h1><a href=#/>Home</a></div>';
 };
 
 let route = (path, template) => {
