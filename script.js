@@ -21,3 +21,7 @@ let route = (path, template) => {
         return;
     };
 };
+
+let template = (name, templateFunction) => {
+    return templates[name] = templateFunction;
+};
