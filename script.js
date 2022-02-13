@@ -62,3 +62,6 @@ let router = ()=> {
     let route = resolveRoute(url);
     route();
 };
+
+window.addEventListener('load', router);
+window.addEventListener('hashchange', router);
